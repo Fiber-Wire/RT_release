@@ -22,7 +22,7 @@ Controlled test scene (same as the reference render above), 400x400 px, 32 sampl
 Camera spins at 0.1rad/frame for a total of 62 frames.
 
 - AMD Ryzen 9 7940HS 8c16t: \~456.5 ms.
-- NVIDIA GeForce RTX 4060 Laptop GPU: \~38.9 ms.
+- NVIDIA GeForce RTX 4060 Laptop GPU: \~32.1 ms.
 
 ## How-to
 
@@ -52,16 +52,13 @@ cmake --build ./cmake-build-release --target RT_project -j 4
 The built program is found at `./cmake-build-release/RT_project.exe`
 
 ### Run
-Run with any arguments for `.ppm` output:
-```shell
-RT_project.exe --device default > render.ppm
-```
 
 Run with default arguments for real-time display output:
 ```shell
 RT_project.exe
 ```
+
 Run with arguments for real-time display output:
 ```shell
-RT_project.exe --size <int> --depth <int> --samples <int> --device <string> --frame <int>
+RT_project.exe --size <int> --depth <int> --samples <int> --frame <int>
 ```
